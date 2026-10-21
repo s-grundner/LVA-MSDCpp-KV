@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+# rust
+target/
+
+# cpp
+build/
