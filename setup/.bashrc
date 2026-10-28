@@ -13,6 +13,9 @@ export PS1="${_GREEN}\u@MSD${_RESET}:${_BLUE}\w${_RESET}\$ "
 
 . /opt/riscv-gnu-toolchain-multi-2026.08.07/env.sh
 
+
+
+
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/ModernSystemDesign/riscv-tiny-rv32i/isa/build/lib"
