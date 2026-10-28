@@ -15,6 +15,7 @@ add_executable(counter
   stimGen.h
   stimGen.cpp
   display.h
+  clockDisplay.h
   main.cc
 )
 

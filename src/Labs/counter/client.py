@@ -116,7 +116,6 @@ def draw_counter(surface, active_segments, off=(0,0)):
     def h_draw(px, py, index):
         draw_segment(px, py, w, h, index)
 
-
     h_draw(b+h, b, 0)
     h_draw(b+h, b+h+w, 6)
     h_draw(b+h, b+2*h+2*w, 3)
