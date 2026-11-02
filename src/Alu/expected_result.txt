@@ -1,0 +1,7 @@
+Time: 10 ns, Mode: 01, OperandA: 1, OperandB: 0, distance: 4, Result: 16
+Time: 20 ns, Mode: 10, OperandA: -127, OperandB: 0, distance: 4, Result: 3
+Time: 30 ns, Mode: 00, OperandA: 93, OperandB: 3, distance: 4, Result: 96
+Time: 40 ns, Mode: 00, OperandA: 127, OperandB: 1, distance: 4, Result: -128
+Time: 50 ns, Mode: 11, OperandA: 127, OperandB: 1, distance: 4, Result: 126
+Time: 60 ns, Mode: 11, OperandA: -128, OperandB: 1, distance: 4, Result: 127
+
