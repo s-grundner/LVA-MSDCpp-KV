@@ -1,0 +1,117 @@
+[init]
+  defaultBranch = dev
+
+[user]
+  name = s-grundner
+  email = simon.grundner@gmail.com
+  signingkey = ~/.ssh/id_ed25519.pub
+
+[gpg]
+  format = ssh
+
+[credential]
+  helper = store
+
+[core]
+  compression = 9
+  whitespace = error
+  preloadindex = true
+  editor = nvim
+
+[commit]
+  gpgSign = true
+  template = ~/.config/git/template
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+# git diff: diff-so-fancy package required
+[diff]
+  context = 3
+  renames = copies
+  interHunkContext = 10
+  submodule = log
+
+[pager]
+  diff = diff-so-fancy
+  branch = false
+  tag = false
+
+[diff-so-fancy]
+  markEmptyLines = false
+
+[color "diff"]
+  meta = black bold
+  frag = magenta
+  context = white
+  whitespace = yellow reverse
+  old = red
+
+# git add:
+[interactive]
+  diff-interactive = diff-so-fancy --patch
+  singlekey = true
+
+# git push / pull
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+
+[pull]
+  default = current
+  rebase = true
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn 
+
+# git log / reflog
+[log]
+  abbrevCommit = true 
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+
+# git branch / tag
+[color "branch"]
+  current = magenta
+  local = default
+  remote = yellow
+  upstream = green
+  plain = blue
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
+
+# Shorten Common SSH-URLs
+[url "git@github.com:s-grundner/"]
+  insteadOf = "s-grundner:"
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+# Aliase
+[alias]
+  last = log -1 HEAD
+  sdiff = !git diff && git submodule foreach 'git diff'
+  spush = push --recurse-submodules=on-demand
+  supdate = submodule update --remote --merge
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[protocol "file"]
+	allow = always
