@@ -28,7 +28,7 @@ SC_MODULE(clockDisplay) {
   }
 
   SC_CTOR(clockDisplay) {
-    // process sentitive to positive clock edge
+    // process sensitive to positive clock edge
     SC_METHOD(work);
     sensitive << ss << mm << hh;
 
